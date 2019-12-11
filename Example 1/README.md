@@ -8,5 +8,6 @@ Using Kustomize where all files are not in the same directory:
 (it is actually using files from the 'base' directory despite being in the 'overlays' directory)
 1. In your Kubernetes, make a new folder named as 'overlays'.
 2. Copy all the files and folder from the 'overlays' folder of this Git repository to your newly made 'overlays' folder.
+   (Don't copy the README.md file)
 3. Create a new namespace named as 'prod'.
 4. Use this command in the 'prod' folder: "kubectl apply -k ."
