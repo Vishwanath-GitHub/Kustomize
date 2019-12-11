@@ -2,6 +2,8 @@ Patching means that we are actually chaning a some parts of a resource by patchi
 
 Now, the actual file structure is same as 'Example 1' only. We are changing the kustomization.yml in 'prod' folder for this patching and adding a patch.yml file.
 
+"patchesJson6902" tag is used inside 'kustomization.yml' to tell it that a patch is to be applied to the resource/workload with the help of a 'patch.yml' file. The content inside this tag shows that which workload is going to be patched and what is its name, version & type. It also specifies the path and name of the 'patch.yml' file.
+
 Steps:
 1. Copy the entire file structure as this Git repository.
 2. Use command "kubectl apply -k ." in 'base' folder.
@@ -9,3 +11,9 @@ Steps:
 4. Use command "kubectl apply -k ." in 'prod' folder.
 
 Acutal Workflow:
+1. The kustomization works as normally on the 'base' folder. So, the workload will be deployed normally with the config in it. Also, the      kustomization file will reference to it as bases.
+2. When the kustomization of 'kustomization.yml' of 'prod' folder is applied, it checks first the 'kustomization.yml' file of the 'base'      folder and verifies if the bases/references are correct are not. It they are correct, it proceeds.
+3. It then proceeds to 'patch.yml' file.
+4. This 'patch.yml' file contains 3 important tags. These define the operation & path on which the patching is to be done on. Also, the        value tag is used change the value. It is important to note that these 3 tags are the actual structure of the "patchesJson6902" tag.
+5. These patches are applied on the resource/workload and the config-map is reconfigured.
+6. Workflow is finished.
