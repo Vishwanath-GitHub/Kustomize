@@ -9,4 +9,4 @@ Using Kustomize where all files are not in the same directory:
 1. In your Kubernetes, make a new folder named as 'overlays'.
 2. Copy all the files and folder from the 'overlays' folder of this Git repository to your newly made 'overlays' folder.
 3. Create a new namespace named as 'prod'.
-4. Use this command in that folder: "kubectl apply -k ."
+4. Use this command in the 'prod' folder: "kubectl apply -k ."
