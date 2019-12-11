@@ -1,1 +1,11 @@
+Patching means that we are actually chaning a some parts of a resource by patching it from another patch file i.e. patch.yml
 
+Now, the actual file structure is same as 'Example 1' only. We are changing the kustomization.yml in 'prod' folder for this patching and adding a patch.yml file.
+
+Steps:
+1. Copy the entire file structure as this Git repository.
+2. Use command "kubectl apply -k ." in 'base' folder.
+3. Create a namespace named 'prod'.
+4. Use command "kubectl apply -k ." in 'prod' folder.
+
+Acutal Workflow:
