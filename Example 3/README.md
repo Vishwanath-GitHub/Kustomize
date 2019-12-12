@@ -8,4 +8,4 @@ Workflow:
 
 For example, we can change "worker_process 1;" to "worker_process 3;" and use "kubectl apply -k .", it creates new config file with the new configuration and applies it to the running workload.
 
-The concept of making new config file everytime for a change is used to avoid conflicts in the building and working of the workload.
+The concept of making new config file everytime for a change is used to avoid conflicts in the building and working of the workload. Also, when the new config file is made and attached to the workload, the .yml file of the workload also changes its reference to the new config file.
