@@ -5,3 +5,5 @@ Kustomize is built-in tool for Kubernetes that is used to perform some changes i
 
 The file-structure comprises of 'base' folder and 'overlays' folder. This arrangement makes it easy to manage your configuration with git. The base could have files from an upstream repository managed by someone else. The overlays could be in a repository you own.
 Check the examples for its working and usage.
+
+Go to this link to know what features Kustomize provides:- https://kubernetes.io/docs/tasks/manage-kubernetes-objects/kustomization/#kustomize-feature-list
