@@ -2,7 +2,7 @@ Patching means that we are actually chaning a some parts of a resource by patchi
 
 Now, the actual file structure is same as 'Example 1' only. We are changing the kustomization.yml in 'prod' folder for this patching and adding a patch.yml file.
 
-"patchesJson6902" tag is used inside 'kustomization.yml' to tell it that a patch is to be applied to the resource/workload with the help of a 'patch.yml' file. The content inside this tag shows that which workload is going to be patched and what is its name, version & type. It also specifies the path and name of the 'patch.yml' file.
+"patchesJson6902" tag is used inside 'kustomization.yml' to tell it that a patch is to be applied to the resource/workload with the help of a 'patch.yml' file. The content inside this tag shows that which workload is going to be patched and what is its name, version & type. It also specifies the path and name of the 'patch.yml' file. This tag is used in a manner such that each entry in the list should resolve to a kubernetes object and a JSON patch that will be applied to the object.
 
 Steps:
 1. Copy the entire file structure as this Git repository.
