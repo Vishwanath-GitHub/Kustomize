@@ -3,7 +3,7 @@ Kustomize is built-in tool for Kubernetes that is used to perform some changes i
 - Kustomize allows to store multiple configuration per Git repository.
 - It is built-in with kubectl v1.14+ and can be accessed with '-k' or '--kustomize'
 
-The default normally used command for Kustomization via 'kubectl' are;
+The default normally used commands for Kustomization via 'kubectl' are;
 1. "kubectl apply -k ." //Used to apply the Kustomization
 2. "kubectl get -k ." //Used to get all the workloads deployed by the Kustomization and the changes made to it(similar to kubectl get all)
 3. "kubectl describe -k ." //Used to get all the details of the workloads deployed by the Kustomization and the changes made to it(similar to kubectl describe all)
