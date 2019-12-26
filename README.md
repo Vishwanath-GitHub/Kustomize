@@ -4,6 +4,13 @@ Kustomize is built-in tool for Kubernetes that is used to perform some changes i
 - Kustomize allows to store multiple configuration per Git repository.
 - It is built-in with kubectl v1.14+ and can be accessed with '-k' or '--kustomize'
 
+## Kustomize installation command:
+- curl -s "https://raw.githubusercontent.com/\
+kubernetes-sigs/kustomize/master/hack/install_kustomize.sh"  | bash (copy complete command)
+
+In case you download Kustromize from the above official link and in some process an error arrives such as: "kustomize: not found", use this command:
+- GO111MODULE=on go install sigs.k8s.io/kustomize/kustomize/v3
+
 The default normally used commands for Kustomization via 'kubectl' are;
 1. "kubectl apply -k ." //Used to apply the Kustomization
 2. "kubectl get -k ." //Used to get all the workloads deployed by the Kustomization and the changes made to it(similar to kubectl get all)
@@ -14,3 +21,4 @@ The file-structure comprises of 'base' folder and 'overlays' folder. This arrang
 Check the examples for its working and usage.
 
 Go to this link to know what features Kustomize provides:- https://kubernetes.io/docs/tasks/manage-kubernetes-objects/kustomization/#kustomize-feature-list
+
