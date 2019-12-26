@@ -11,7 +11,8 @@ kubernetes-sigs/kustomize/master/hack/install_kustomize.sh"  | bash (copy comple
 In case you download Kustromize from the above official link and in some process an error arrives such as: "kustomize: not found", use this command:
 - GO111MODULE=on go install sigs.k8s.io/kustomize/kustomize/v3
 
-The default normally used commands for Kustomization via 'kubectl' are;
+
+The default normally used commands for Kustomization via 'kubectl' are:
 1. "kubectl apply -k ." //Used to apply the Kustomization
 2. "kubectl get -k ." //Used to get all the workloads deployed by the Kustomization and the changes made to it(similar to kubectl get all)
 3. "kubectl describe -k ." //Used to get all the details of the workloads deployed by the Kustomization and the changes made to it(similar to kubectl describe all)
